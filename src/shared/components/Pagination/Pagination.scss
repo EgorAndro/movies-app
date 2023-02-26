@@ -1,0 +1,42 @@
+@import "../../styles/variables.scss";
+
+.pagination {
+	display: flex;
+	justify-content: center;
+
+	&__btn {
+		padding: 0;
+		width: 5rem;
+		height: 5rem;
+		border-radius: 50%;
+		font-size: 1.8rem;
+		box-shadow: 0 .5rem 1.5rem rgba($black-bg, .4);
+		margin-right: 1rem;
+		font-family: $font-numbers;
+		color: $grey-text;
+		transition: none;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:hover {
+			color: $orange-text;
+		} 
+
+		&--active {
+			background-color: $orange-bg;
+			color: $white-text;
+			
+				&:hover {
+					color: $white-text;
+				}
+		}
+
+		&--disabled {
+			opacity: 0.5;
+			pointer-events: none;
+			cursor: default;
+		}
+	}
+}

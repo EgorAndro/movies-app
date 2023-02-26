@@ -1,0 +1,94 @@
+@import '../../shared/styles/variables.scss';
+
+.auth {
+	width: 100%;
+	padding: 2.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__form-wrapper {
+		max-width: 45rem;
+		width: 100%;
+		margin: auto;
+		background-color: $white-bg;
+		box-shadow: 0 .5rem 1.5rem rgba($black-bg, .4);
+		border-radius: 2.5rem;
+	}
+
+	&__tabs {
+		display: flex;
+		border-bottom: .2rem solid $lightgrey-border;
+		margin-bottom: 3.5rem;
+	}
+
+	&__tab {
+		flex-grow: 1;
+		border: none;
+		outline: none;
+		background-color: $transparent-bg;
+		font-family: $font;
+		font-weight: 700;
+		font-size: 1.8rem;
+		padding: 2rem 3.5rem;
+		position: relative;
+		cursor: pointer;
+		color: $grey-text;
+		transition: color 200ms ease;
+
+		&::before {
+			content: "";
+			bottom: -0.2rem;
+			left: 0;
+			width: 100%;
+			height: .2rem;
+			position: absolute;
+			background-color: $transparent-bg;
+			transition: background-color 200ms ease;
+		}
+
+		&:hover {
+			&::before {
+					background-color: lighten($blue-border, 35%);
+				}
+		}
+	
+		&--active {
+			cursor: default;
+			color: $black-text;
+
+			&:hover {
+				&::before {
+						background-color: $blue-border;
+					}
+			}
+
+			&::before {
+				background-color: $blue-border;
+			}
+		}
+	}
+
+	&__form {
+		padding: 0 3.5rem 3.5rem;
+	}
+	&__field-wrapper {
+		margin-bottom: 3.5rem;
+	}
+	&__input-wrapper {
+		max-width: 100%;
+	}
+	&__input {
+		width: 100%;
+	}
+
+	&__btn {
+		margin: 0 auto;
+	}
+
+	&__error {
+		margin-top: .5rem;
+		color: $red-text;
+		font-size: 1.4rem;
+	}
+}

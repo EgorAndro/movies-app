@@ -1,0 +1,41 @@
+@import '../../styles/variables.scss';
+@import '../../styles/placeholders.scss';
+@import '../../styles/mixins.scss';
+
+.toolbar {
+	background-color: rgba($white-bg, .9);
+	padding: $gutter;
+	box-shadow: 0 .5rem 1.5rem rgba($black-bg, .4);
+
+	&--sticky {
+		position: sticky;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		width: 100%;
+	}
+
+	&__wrapper {
+		@extend %section-wrapper;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__title {
+		width: 100%;
+		text-align: center;
+		color: $grey-text;
+		font-size: 2.4rem;
+	}
+
+	&__tools {
+		display: flex;
+		
+	}
+
+	&__input {
+		margin-right: 2.5rem;
+	}
+}
+

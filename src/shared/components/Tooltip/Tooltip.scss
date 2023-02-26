@@ -1,0 +1,28 @@
+@import '../../styles/variables.scss';
+
+.tooltip.show {
+	font-size: 1.6rem;
+	background-color: $orange-bg;
+
+	&.place-left {
+		&::after {
+			border-left-color: $orange-bg;
+		}
+	}
+
+	&.place-right {
+		&::after {
+			border-right-color: $orange-bg;
+		}
+	}
+	&.place-top {
+		&::after {
+			border-top-color: $orange-bg;
+		}
+	}
+	&.place-bottom {
+		&::after {
+			border-bottom-color: $orange-bg;
+		}
+	}
+}

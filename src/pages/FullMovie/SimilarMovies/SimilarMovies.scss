@@ -1,0 +1,31 @@
+@import '../../../shared/styles/variables.scss';
+@import '../../../shared/styles/mixins.scss';
+
+
+.similar-movies {
+position: relative;
+z-index: 1;
+max-width: 15rem;
+width: 100%;
+
+
+	&__list-item {
+		margin-bottom: 2rem;
+		margin-right: 2rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__img {
+		width: 100%;
+		display: flex;
+	}
+
+	&__link {
+		&:focus {
+			outline: $orange-border;
+		}
+	}
+}

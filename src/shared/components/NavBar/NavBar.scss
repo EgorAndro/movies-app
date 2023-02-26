@@ -1,0 +1,38 @@
+@import '../../styles/variables.scss';
+
+.navbar {
+
+	&__list {
+		display: flex;
+		align-items: center;
+	}
+
+	&__list-item {
+		margin-right: 2.5rem;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__link {
+		color: $grey-text;
+		cursor: pointer;
+		text-decoration: underline $transparent-text;
+		outline: none;
+		transition: 
+			color 200ms ease,
+			text-decoration 200ms ease;
+			
+		&:hover,
+		&--active {
+			color: $orange-text;
+			text-decoration: underline $orange-text;
+		}
+
+		&:focus {
+			outline: .2rem solid rgba($orange-border, .6);
+			outline-offset: .3rem;
+		}
+	}
+}

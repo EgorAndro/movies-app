@@ -1,0 +1,26 @@
+@import '../../styles/variables.scss';
+
+.loader {
+	font-size: 3rem;
+	position: absolute;
+	top: calc(50% - 3rem / 2);
+	left: calc(50% - 3rem / 2);
+	animation: spin 500ms linear infinite;
+	z-index: 4;
+
+	&--orange {
+		color: $orange-text;
+	}
+	&--blue {
+		color: $blue-text;
+	}
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

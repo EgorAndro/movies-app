@@ -1,0 +1,40 @@
+@import '../../styles/variables.scss';
+
+.input-wrapper {
+	position: relative;
+	max-width: max-content;
+
+	&__label {
+		color: $grey-text;
+		position: absolute;
+		cursor: text;
+		top: calc(50% - 1.6rem/2);
+		left: 1rem;
+		transition: 
+		top 400ms ease,
+		left 400ms ease,
+		font-size 400ms ease;
+
+		&--top {
+			top: -1.2rem;
+			font-size: 1.2rem;
+		}
+	}
+
+	&__input {
+		display: block;
+		min-width: 30rem;
+		outline: none;
+		background-color: $transparent-bg;
+		border: none;
+		border-bottom: .2rem solid $grey-border;
+		padding: 1rem;
+		font-family: $font;
+		font-size: 1.6rem;
+		transition: border-color 200ms ease;
+
+		&:focus {
+			border-color: $orange-border;
+		}
+	}
+}

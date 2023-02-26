@@ -1,0 +1,14 @@
+@import './variables.scss';
+
+%section-wrapper {
+	max-width: 140rem;
+	width: 100%;
+	margin: 0 auto;
+}
+
+%card {
+	background-color: $white-bg;
+	padding: 3rem;
+	border-radius: 1.5rem;
+	box-shadow: 0 .5rem 1.5rem rgba($black-bg, .4);
+}

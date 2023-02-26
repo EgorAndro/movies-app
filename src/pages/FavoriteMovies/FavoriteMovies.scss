@@ -1,0 +1,112 @@
+@import '../../shared/styles/placeholders.scss';
+@import "../../shared/styles/variables.scss";
+
+.favorite-movies {
+	padding: 2.5rem;
+	width: 100%;
+
+	&__container {
+		height: 100%;
+		display: flex;
+	}
+
+	&__emptytext {
+		@extend %card;
+
+		margin: auto;
+	}
+		
+
+	&__table {
+		border-spacing: 0;
+		width: 100%;
+		background-color: $lightgrey-bg;
+		border-radius: 1rem;
+		box-shadow: 0 .5rem 1.5rem rgba($black-bg, .4);
+	}
+
+	&__tr {
+		&:last-child {
+			.favorite-movies__td {
+				border-bottom: none;
+			}
+		}
+	}
+
+	&__th,
+	&__td {
+		padding: 1.5rem 2.5rem;
+		max-height: 25rem;
+
+		&:nth-child(4) {
+				max-width: 50rem;
+			}
+	}
+
+	&__th {
+		background-color: $black-bg;
+		color: $white-text;
+
+		&:first-child {
+			border-radius: 1rem 0 0 0;
+		}
+
+	
+
+		&:last-child {
+			border-radius: 0 1rem 0 0;
+		}
+	}
+
+	&__td {
+		text-align: center;
+		border-bottom: .1rem dashed $black-border;
+	}
+
+	&__link {
+		color: $black-text;
+
+		&:hover {
+			text-decoration: none;
+
+			.favorite-movies__icon,
+			.favorite-movies__text {
+				color: $blue-text;
+			}
+		}
+	}
+
+	&__icon {
+		margin-right: .5rem;
+		font-size: 1.8rem;
+		position: relative;
+		top: .1rem;
+		transition: color 200ms ease;
+	}
+
+	&__text {
+		transition: color 200ms ease;
+		font-family: $font-numbers;
+	}
+
+	&__img-wrapper {
+		max-width: 15rem;
+		margin: 0 auto;
+		box-shadow: 0 .5rem 1.5rem rgba($black-bg, .4);
+		border-radius: .8rem;
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+		border-radius: .8rem;
+	}
+
+	&__btn {
+		margin: 0 auto;
+	}
+
+	&__pagination {
+		margin-top: 3rem;
+	}
+}

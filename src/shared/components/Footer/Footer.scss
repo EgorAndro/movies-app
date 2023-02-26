@@ -1,0 +1,17 @@
+@import '../../styles/placeholders.scss';
+@import '../../styles/variables.scss';
+
+.footer {
+	background-color: $white-bg;
+	padding: 1.5rem $gutter;
+
+	&__wrapper {
+		@extend %section-wrapper;
+		
+		text-align: center;
+	}
+
+	&__copyright {
+		color: $grey-text;
+	}
+}
